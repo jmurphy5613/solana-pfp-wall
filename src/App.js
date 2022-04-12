@@ -1,14 +1,19 @@
 import { useEffect, useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: '#0f172a',
     width: '100vw',
     height: '100vh'
+  },
+  mainTitle: {
+    color: '#ffffff',
+    fontFamily: theme.typography.fontFamily.primary
   }
-})
+}))
 
 function App() {
 
@@ -60,7 +65,9 @@ function App() {
 
   return (
     <div className={classes.root}>
-      hey
+      <Typography variant="h2" className={classes.mainTitle}>
+        John's Profile Picture Wall
+      </Typography>
     </div>
   );
 }
