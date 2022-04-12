@@ -1,6 +1,18 @@
 import { useEffect, useState } from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: '#0f172a',
+    width: '100vw',
+    height: '100vh'
+  }
+})
+
 function App() {
+
+  const classes = useStyles();
 
   const [connectedWallet, setConnectedWallet] = useState();
 
@@ -47,10 +59,8 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <button onClick={connectToSolana}>
-        Connect Wallet
-      </button>
+    <div className={classes.root}>
+      hey
     </div>
   );
 }
